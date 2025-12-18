@@ -21,6 +21,8 @@ void showConfirmTerima({
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
         children: [
+          //! kenapa animasi JSON daripada gambar?
+          //! karena lottie itu lightweight, lalu lebih clean jika dipandang visual
           Lottie.asset('assets/lottie/gift.json',
               height: 100, fit: BoxFit.cover),
           const Text(

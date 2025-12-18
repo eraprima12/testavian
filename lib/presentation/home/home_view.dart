@@ -15,6 +15,8 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFF5F7F7),
+      //! APPBAR Dibuat seperti ini karena menurut saya lebih clean dan estetik,
+      //! dan peletakan Dropdown dan tombol total hadiah lebih estetik ketika appbar diberi warna primary
       appBar: AppBar(
         elevation: 0,
         backgroundColor: const Color(0xFF0E7C6B),
@@ -84,7 +86,7 @@ class HomePage extends StatelessWidget {
             itemCount: controller.customers.length,
             itemBuilder: (context, index) {
               final customer = controller.customers[index];
-
+              //! Container ListTTH toko dibuat seperti ini karena lebih simple dan mudah untuk di notice pengguna awam
               return Container(
                 margin: const EdgeInsets.only(bottom: 20),
                 padding: const EdgeInsets.all(16),
