@@ -113,9 +113,18 @@ class HomePage extends StatelessWidget {
                                 ),
                               ),
                               const SizedBox(height: 4),
-                              Text(
-                                customer.address ?? '-',
-                                style: const TextStyle(fontSize: 12),
+                              Row(
+                                children: [
+                                  const Icon(
+                                    Icons.location_pin,
+                                    size: 12,
+                                    color: Colors.grey,
+                                  ),
+                                  Text(
+                                    customer.address ?? '-',
+                                    style: const TextStyle(fontSize: 12),
+                                  ),
+                                ],
                               ),
                             ],
                           ),
@@ -128,14 +137,23 @@ class HomePage extends StatelessWidget {
                               style: TextStyle(
                                 color: customer.status == 'Sudah Diberikan'
                                     ? Colors.green
-                                    : Colors.orange,
+                                    : Colors.red,
                                 fontWeight: FontWeight.w600,
                               ),
                             ),
                             const SizedBox(height: 4),
-                            Text(
-                              customer.phone ?? '-',
-                              style: const TextStyle(fontSize: 12),
+                            Row(
+                              children: [
+                                const Icon(
+                                  Icons.phone,
+                                  size: 12,
+                                  color: Colors.grey,
+                                ),
+                                Text(
+                                  customer.phone ?? '-',
+                                  style: const TextStyle(fontSize: 12),
+                                ),
+                              ],
                             ),
                           ],
                         )
